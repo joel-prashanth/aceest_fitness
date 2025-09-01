@@ -38,3 +38,24 @@ python -m venv .venv
 pip install -r requirements.txt
 python -m aceest_fitness.app
 # open http://127.0.0.1:5000
+
+
+# ACEestFitness — DevOps Assignment
+
+✅ Working Flask app with features
+
+✅ Unit tests with pytest
+
+✅ Pre-commit hooks enforcing quality
+
+✅ Dockerized app
+
+✅ GitHub Actions CI pipeline
+
+✅ Live deployment (Render) 🌍
+
+Live demo: https://your-render-service.onrender.com
+
+## Run locally
+...
+
