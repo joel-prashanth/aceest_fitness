@@ -54,7 +54,7 @@ python -m aceest_fitness.app
 
 ✅ Live deployment (Render) 🌍
 
-Live demo: https://your-render-service.onrender.com
+Live demo: https://aceest-fitness.onrender.com/
 
 ## Run locally
 ...
