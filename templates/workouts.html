@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+<h2>Logged Workouts</h2>
+
+{% if workouts %}
+<form action="{{ url_for('reset_workouts') }}" method="post">
+  <button type="submit" style="margin-bottom: 10px">Reset All Workouts</button>
+</form>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Workout</th>
+    <th>Duration (min)</th>
+    <th>Reps</th>
+    <th>Calories</th>
+    <th>Date</th>
+  </tr>
+  {% for w in workouts %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ w.workout }}</td>
+    <td>{{ w.duration }}</td>
+    <td>{{ w.reps if w.reps else "N/A" }}</td>
+    <td>{{ w.calories if w.calories else "N/A" }}</td>
+    <td>{{ w.date }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>No workouts logged yet.</p>
+{% endif %} {% endblock %}
