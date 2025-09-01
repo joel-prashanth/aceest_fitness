@@ -1,4 +1,4 @@
-# ACEestFitness — DevOps Assignment
+# ACEestFitness — DevOps Assignment Live demo: https://aceest-fitness.onrender.com/
 
 Small Flask fitness tracker used for a DevOps assignment.
 Features: add workouts (name, duration, reps, calories), view table, reset all workouts. In-memory storage.
@@ -54,8 +54,5 @@ python -m aceest_fitness.app
 
 ✅ Live deployment (Render) 🌍
 
-Live demo: https://aceest-fitness.onrender.com/
-
-## Run locally
 ...
 
