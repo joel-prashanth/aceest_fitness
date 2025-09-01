@@ -45,4 +45,4 @@ def reset_workouts():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  # for local dev only
