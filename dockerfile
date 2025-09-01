@@ -1,23 +1,18 @@
-# Use official lightweight Python image
 FROM python:3.12-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy requirements first (leveraging Docker cache)
 COPY requirements.txt .
-
-# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
 COPY aceest_fitness/ aceest_fitness/
-COPY pytest.ini .
-COPY .pre-commit-config.yaml .
-COPY tests/ tests/
 
-# Expose Flask default port
+# Set environment variables so Flask finds the app
+ENV FLASK_APP=aceest_fitness.app:app
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=5000
+
 EXPOSE 5000
 
-# Run the Flask app
+# Run flask app
 CMD ["flask", "run"]
